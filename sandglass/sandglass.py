@@ -203,7 +203,8 @@ class Sandglass(object):
 
     @property
     def timestamp(self):
-        return int(time.mktime(self._dt.timetuple()))+self.microsecond/1000000.0
+        #return int(time.mktime(self._dt.timetuple()))+self.microsecond/1000000.0
+        return int(time.mktime(self._dt.timetuple()))
 
     @property
     def days_in_month(self):
