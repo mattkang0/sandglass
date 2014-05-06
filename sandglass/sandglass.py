@@ -203,7 +203,7 @@ class Sandglass(object):
 
     @property
     def timestamp(self):
-        return time.mktime(self._dt.timetuple())
+        return int(time.mktime(self._dt.timetuple()))+self.microsecond/1000000.0
 
     @property
     def days_in_month(self):
@@ -301,4 +301,4 @@ def ben(*args, **kwargs):
         return Sandglass.strptime(date_str,fmt)
 
 
-sg = ben('2013,1,1')
+#sg = ben('2013,1,1')
